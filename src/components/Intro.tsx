@@ -1,25 +1,23 @@
-import Image from "next/image";
-import { Section, Title } from "./ui/styles";
+import { GradientTitle, Section, Text, Title } from "./ui/styles";
+import Icon from "./Icon";
 
 function Intro() {
   return (
-    <Section >
-      <div>
-        <Title>
-          Olá, me chamo Alexandre Roberto, também conhecido como{" "}
-        </Title>
-        <h1 className="text-5xl leading-[60px] text-transparent bg-clip-text bg-gradient-to-b from-accent to-secondary-foreground ">
+    <Section className=" pt-60 max-lg:pt-20">
+      <div className="flex flex-col max-lg:gap-5">
+        <Title>Olá, me chamo Alexandre Roberto, também conhecido como </Title>
+        <GradientTitle className="text-5xl leading-[60px] font-extrabold max-lg:text-xl ">
           XandZap Desenvolvedor Frontend.
-        </h1>
-        <p className="w-1/2 text-xl leading-8">
+        </GradientTitle>
+        <Text>
           Sou programador frontend apaixonado por criar experiências digitais excepcionais, utilizando tecnologias
           como React, TypeScript e NextJS. Meu objetivo é entregar produtos de alta qualidade, buscando sempre
           inovação e aprendizado contínuo.
-        </p>
-        <p className="w-1/2 text-xl leading-8">Vamos construir algo incrível juntos!</p>
+        </Text>
+        <Text>Vamos construir algo incrível juntos!</Text>
       </div>
-      <div className="flex justify-center items-center rounded-[100%] overflow-hidden w-1/2 relative">
-        <Image src="/assets/img/XandImage.JPG" alt="Imagem de perfil de XandZap" fill objectFit="cover" />
+      <div className="max-lg:hidden">
+        <Icon />
       </div>
     </Section>
   );
