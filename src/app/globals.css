@@ -6,6 +6,24 @@ body {
   min-height: 100vh;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--secondary));
+  opacity: 0.2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--background));
+  border-radius: 10px; /* Make the thumb rounded */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
 @layer base {
   :root {
     --background: 253, 35%, 21%;
