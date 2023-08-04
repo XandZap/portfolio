@@ -13,7 +13,7 @@ export const links = [
   {
     name: "WeatherZap",
     description: "Projeto landing page de previsão de tempo, ainda em construção.",
-    url: "weatherzap.vercel.app",
+    url: "https://weatherzap.vercel.app",
     icon: LuConstruction,
     github: "https://github.com/XandZap/AppWeatherZap",
     technologies: "NextJs · Typescript · WeatherAPI · Tailwind CSS · Date-fns · Radix UI",
