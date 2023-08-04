@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { BsGithub } from "react-icons/bs";
+import { BsBoxArrowUpRight, BsGithub } from "react-icons/bs";
 import { links } from "@/utils/links";
 import { Box, Description, GradientTitle, Section, Title } from "./ui/styles";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
@@ -22,8 +22,9 @@ function Projects() {
             <CardContent className="mt-5 text-accent">
               <div className="flex items-center justify-between">
                 <Link href={link.url} target="_blank">
-                  <GradientTitle className=" duration-300 hover:text-secondary-foreground hover:scale-x-110">
+                  <GradientTitle className="flex items-center gap-2 text-accent duration-300 hover:text-secondary-foreground hover:scale-110">
                     {link.name}
+                    <BsBoxArrowUpRight className="text-xs" />
                   </GradientTitle>
                 </Link>
                 {link.icon && <link.icon />}
