@@ -5,7 +5,7 @@ function About() {
   return (
     <Section className="">
       <div className="flex justify-center items-center rounded-[100%] overflow-hidden w-80 h-80 border relative">
-        <Image src="/assets/img/XandImage.JPG" alt="Imagem de perfil de XandZap" fill objectFit="cover" />
+        <Image src="/assets/img/XandImage.JPG" alt="Imagem de perfil de XandZap" fill  />
       </div>
       <Box className="w-1/2">
         <Title>Quem sou eu</Title>

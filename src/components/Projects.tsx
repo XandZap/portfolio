@@ -17,16 +17,16 @@ function Projects() {
             className="relative overflow-hidden max-w-[500px] w-full min-h-[480px] text-accent max-lg:min-w-[250px]"
           >
             <CardHeader className="relative overflow-hidden h-[200px]">
-              <Image src={link.imgUrl} alt="finanças" fill />
+              <Image src={link.imgUrl} alt="finanças" fill sizes="100%" />
             </CardHeader>
             <CardContent className="mt-5 text-accent">
               <div className="flex items-center justify-between">
                 <Link href={link.url} target="_blank">
                   <GradientTitle className=" duration-300 hover:text-secondary-foreground hover:scale-x-110">
                     {link.name}
-                    {link?.icon}
                   </GradientTitle>
                 </Link>
+                {link.icon && <link.icon />}
                 <Link href={link.github} target="_blank">
                   <BsGithub className=" duration-300 hover:text-primary hover:scale-x-125" />
                 </Link>
