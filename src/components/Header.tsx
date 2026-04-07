@@ -19,7 +19,7 @@ function Header() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/90 dark:bg-background/90 bg-white/90 backdrop-blur-md shadow-lg py-3"
+          ? "bg-background/90 backdrop-blur-md shadow-lg py-3"
           : "bg-transparent py-5"
       }`}
     >
