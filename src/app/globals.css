@@ -98,6 +98,6 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-gradient-to-r from-background via-secondary to-background text-foreground;
+    @apply bg-gradient-to-tr from-background via-secondary/50 to-background text-foreground transition-colors duration-300;
   }
 }
