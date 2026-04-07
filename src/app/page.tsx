@@ -20,7 +20,7 @@ const jsonLd = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
       {/* JSON-LD structured data for SEO */}
       <Script
         id="json-ld"

@@ -23,7 +23,7 @@ function Header() {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="flex justify-between items-center px-[8%]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center">
         <Link href="#" className="text-xl font-bold text-secondary-foreground hover:scale-105 transition-transform duration-200">
           XandZap<span className="text-primary">Dev</span>
         </Link>

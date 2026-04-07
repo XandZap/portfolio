@@ -61,7 +61,7 @@ function ParallaxSection({ backgroundImage, quote, author }: ParallaxSectionProp
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-[8%] text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
         <blockquote className="max-w-3xl mx-auto">
           <p className="text-2xl md:text-3xl font-bold text-accent/95 leading-relaxed italic">
             &ldquo;{quote}&rdquo;

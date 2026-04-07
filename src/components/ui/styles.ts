@@ -4,10 +4,9 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const Section = tw.section`
-  flex 
-  justify-between 
+  flex
+  justify-between
   py-28
-  max-lg:px-3
   max-lg:py-16
   max-lg:flex-col
   max-lg:text-base
