@@ -2,7 +2,6 @@
 import { useScroll } from "@/hooks";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { label: "Sobre", href: "#sobre" },
@@ -19,7 +18,7 @@ function Header() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/90 backdrop-blur-md shadow-lg py-3"
+          ? "bg-background/95 backdrop-blur-md shadow-lg py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -38,29 +37,26 @@ function Header() {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-4">
-          <ThemeToggle />
-          <nav className="hidden md:flex items-center gap-3">
-            <a
-              href="https://www.linkedin.com/in/alexandre-roberto/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-secondary-foreground transition-colors duration-200"
-              aria-label="LinkedIn"
-            >
-              <BsLinkedin />
-            </a>
-            <a
-              href="https://github.com/XandZap"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground/70 hover:text-secondary-foreground transition-colors duration-200"
-              aria-label="GitHub"
-            >
-              <BsGithub />
-            </a>
-          </nav>
-        </div>
+        <nav className="flex items-center gap-3">
+          <a
+            href="https://www.linkedin.com/in/alexandre-roberto/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/70 hover:text-secondary-foreground transition-colors duration-200"
+            aria-label="LinkedIn"
+          >
+            <BsLinkedin />
+          </a>
+          <a
+            href="https://github.com/XandZap"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/70 hover:text-secondary-foreground transition-colors duration-200"
+            aria-label="GitHub"
+          >
+            <BsGithub />
+          </a>
+        </nav>
       </div>
     </header>
   );
