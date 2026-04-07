@@ -2,7 +2,7 @@ import { About, Aside, Footer, Intro, Projects, Technologies, Work } from "@/com
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col items-stretch justify-between h-screen px-[8%]">
+    <main className="flex flex-col gap-8 px-[8%] py-4">
       <Intro />
       <About />
       <Technologies />
@@ -13,4 +13,3 @@ export default function Home() {
     </main>
   );
 }
-

@@ -9,7 +9,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 function Projects() {
   return (
     <Section className="flex-col">
-      <Title className="text-xl">Alguns projetos que criei</Title>
+      <Title className="text-xl">Projetos em destaque</Title>
       <Box className="w-full m-0 grid grid-flow-row grid-cols-3 gap-4 max-lg:flex max-lg:overflow-x-scroll">
         {links.map((link) => (
           <Card
@@ -17,7 +17,7 @@ function Projects() {
             className="relative overflow-hidden max-w-[500px] w-full min-h-[480px] text-accent max-lg:min-w-[250px]"
           >
             <CardHeader className="relative overflow-hidden h-[200px]">
-              <Image src={link.imgUrl} alt="finanças" fill sizes="100%" />
+              <Image src={link.imgUrl} alt={`Screenshot do projeto ${link.name}`} fill sizes="100%" className="object-cover" />
             </CardHeader>
             <CardContent className="mt-5 text-accent">
               <div className="flex items-center justify-between">
@@ -29,7 +29,7 @@ function Projects() {
                 </Link>
                 {link.icon && <link.icon />}
                 <Link href={link.github} target="_blank">
-                  <BsGithub className=" duration-300 hover:text-primary hover:scale-x-125" />
+                  <BsGithub className="duration-300 hover:text-primary hover:scale-x-125" />
                 </Link>
               </div>
               <Description className="text-justify">{link.description}</Description>
@@ -43,4 +43,3 @@ function Projects() {
 }
 
 export default Projects;
-

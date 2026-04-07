@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
 }
@@ -17,7 +21,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--background));
-  border-radius: 10px; /* Make the thumb rounded */
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -98,4 +102,3 @@ body {
     @apply bg-gradient-to-r from-background via-secondary to-background text-foreground;
   }
 }
-

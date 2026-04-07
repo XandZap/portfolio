@@ -1,19 +1,19 @@
 import Image from "next/image";
-import { Box, Section, Text, Title } from "./ui/styles";
+import { Box, Section, Title, Text } from "./ui/styles";
 
 function About() {
   return (
-    <Section className="">
-      <div className="flex justify-center items-center rounded-[100%] overflow-hidden w-80 h-80 border relative">
-        <Image src="/assets/img/XandImage.JPG" alt="Imagem de perfil de XandZap" fill  />
+    <Section>
+      <div className="flex-shrink-0 flex justify-center items-center rounded-full overflow-hidden w-80 h-80 border-2 border-primary/30 relative shadow-lg shadow-primary/10">
+        <Image src="/assets/img/XandImage.JPG" alt="Foto de perfil de Alexandre Roberto (XandZap) - Desenvolvedor Frontend" fill className="object-cover" />
       </div>
       <Box className="w-1/2">
         <Title>Quem sou eu</Title>
         <Text>
           Formado em Ciência da Computação e apaixonado por desenvolvimento web. Minha jornada começou na
-          faculdade, e desde então venho aprimorando minhas habilidades. Com foco no frontend, sou especialista em
-          React e também tenho conhecimentos em Node.js para o backend. Iniciei minha carreira em fevereiro de 2022
-          como estagiário e, em junho, fui contratado como desenvolvedor Frontend.
+          faculdade, e desde então venho aprimorando minhas habilidades em cada projeto. Com foco no frontend, sou especialista em
+          React e também possuo conhecimentos em Node.js para o backend. Iniciei minha carreira em fevereiro de 2022
+          como estagiário na Luby Software e, em junho do mesmo ano, fui promovido a desenvolvedor frontend pleno.
         </Text>
       </Box>
     </Section>
@@ -21,4 +21,3 @@ function About() {
 }
 
 export default About;
-
