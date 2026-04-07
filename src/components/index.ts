@@ -5,3 +5,4 @@ export { default as Technologies } from "./Technologies";
 export { default as Aside } from "./Aside";
 export { default as Footer } from "./Footer";
 export { default as Work } from "./Work";
+export { default as CTA } from "./CTA";

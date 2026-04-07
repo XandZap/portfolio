@@ -1,39 +1,69 @@
 "use client"
-import tw from "tailwind-styled-components";
 import { useScroll } from "@/hooks";
-import { SLink } from "./ui/styles";
+import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import ThemeToggle from "./ThemeToggle";
+
+const navItems = [
+  { label: "Sobre", href: "#sobre" },
+  { label: "Experiência", href: "#experiencia" },
+  { label: "Projetos", href: "#projetos" },
+  { label: "Contato", href: "#contato" },
+];
 
 function Header() {
   const scroll = useScroll();
-
-  const handleScroll = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const isScrolled = scroll > 50;
 
   return (
     <header
-      className={`fixed top-0 py-7 px-[8%] w-full flex justify-between items-center z-10 transition-all duration-300 ${
-        scroll > 0 ? "bg-background/90 backdrop-blur shadow-lg" : "bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/90 dark:bg-background/90 bg-white/90 backdrop-blur-md shadow-lg py-3"
+          : "bg-transparent py-5"
       }`}
     >
-      <button onClick={handleScroll} className="cursor-pointer">
-        <SLink href="#">XandZapDev</SLink>
-      </button>
-      <nav className="flex gap-5">
-        <SLink href="https://www.linkedin.com/in/alexandre-roberto/" target="_blank">
-          <Span>LinkedIn</Span>
-          <BsLinkedin />
-        </SLink>
-        <SLink href="https://github.com/XandZap" target="_blank">
-          <Span>GitHub</Span>
-          <BsGithub />
-        </SLink>
-      </nav>
+      <div className="flex justify-between items-center px-[8%]">
+        <Link href="#" className="text-xl font-bold text-secondary-foreground hover:scale-105 transition-transform duration-200">
+          XandZap<span className="text-primary">Dev</span>
+        </Link>
+        <nav className="hidden md:flex items-center gap-6">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="text-sm text-foreground/70 hover:text-secondary-foreground transition-colors duration-200"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          <nav className="hidden md:flex items-center gap-3">
+            <a
+              href="https://www.linkedin.com/in/alexandre-roberto/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/70 hover:text-secondary-foreground transition-colors duration-200"
+              aria-label="LinkedIn"
+            >
+              <BsLinkedin />
+            </a>
+            <a
+              href="https://github.com/XandZap"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/70 hover:text-secondary-foreground transition-colors duration-200"
+              aria-label="GitHub"
+            >
+              <BsGithub />
+            </a>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 }
 
 export default Header;
-
-const Span = tw.span`max-md:hidden`;
