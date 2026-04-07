@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 
 export function useScroll() {
@@ -8,7 +9,7 @@ export function useScroll() {
       setScrollPosition(window.scrollY);
     }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -17,4 +18,3 @@ export function useScroll() {
 
   return scrollPosition;
 }
-

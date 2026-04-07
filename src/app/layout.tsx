@@ -8,6 +8,13 @@ const lato = Lato({ weight: ["400", "700", "900"], subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "XandZap | Desenvolvedor Frontend",
   description: "Portfólio de Alexandre Roberto — Desenvolvedor Frontend especializado em React, TypeScript e Next.js, criando experiências digitais modernas e de alto desempenho.",
+  openGraph: {
+    title: "XandZap | Desenvolvedor Frontend",
+    description: "Portfólio de Alexandre Roberto — Desenvolvedor Frontend especializado em React, TypeScript e Next.js.",
+    type: "website",
+    locale: "pt_BR",
+  },
+  robots: "index, follow",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

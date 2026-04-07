@@ -1,4 +1,4 @@
-import { About, Aside, Footer, Intro, Projects, Technologies, Work } from "@/components";
+import { Intro, About, Technologies, Work, Projects, Footer, Aside } from "@/components";
 
 export default function Home() {
   return (
